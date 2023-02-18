@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": ["dist", "CHANGELOG.md", "LICENSE", "README.md"],
+  "scripts": {
+    "build": "node-scripts build",
+    "watch": "node-scripts watch",
+    "format": "node-scripts format",
+    "lint": "node-scripts lint",
+    "test": "node-scripts test"
+  },
+  "devDependencies": {
+    "@guoyunhe/node-scripts": "^2.0.0",
+    "@tsconfig/vite-react": "^1.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^4.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "eslintConfig": {
+    "extends": "@guoyunhe/node-scripts"
+  },
+  "jest": {
+    "preset": "@guoyunhe/node-scripts"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100
+  }
+}

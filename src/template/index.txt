@@ -1,0 +1,9 @@
+import React, { Reactnode } from 'react';
+
+export interface %componentName%Props {
+  children: ReactNode;
+}
+
+export function %componentName%({ children }: %componentName%Props) {
+  return <div className="%componentName%">{children}</div>;
+}
