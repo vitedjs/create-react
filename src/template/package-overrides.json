@@ -4,14 +4,14 @@
   "typings": "dist/index.d.ts",
   "files": ["dist", "CHANGELOG.md", "LICENSE", "README.md"],
   "scripts": {
-    "build": "node-scripts build",
-    "watch": "node-scripts watch",
-    "format": "node-scripts format",
-    "lint": "node-scripts lint",
-    "test": "node-scripts test"
+    "build": "react-lib-scripts build",
+    "watch": "react-lib-scripts watch",
+    "format": "react-lib-scripts format",
+    "lint": "react-lib-scripts lint",
+    "test": "react-lib-scripts test"
   },
   "devDependencies": {
-    "@guoyunhe/node-scripts": "^2.0.0",
+    "@guoyunhe/react-lib-scripts": "^2.0.0",
     "@tsconfig/vite-react": "^1.0.0",
     "@types/jest": "^29.0.0",
     "@types/react": "^18.0.0",
@@ -24,10 +24,10 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "eslintConfig": {
-    "extends": "@guoyunhe/node-scripts"
+    "extends": "@guoyunhe/react-lib-scripts"
   },
   "jest": {
-    "preset": "@guoyunhe/node-scripts"
+    "preset": "@guoyunhe/react-lib-scripts"
   },
   "prettier": {
     "singleQuote": true,

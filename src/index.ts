@@ -16,9 +16,9 @@ import indexTs from './template/index.txt';
 import packageJsonDefaults from './template/package-defaults.json';
 import packageJsonOverrides from './template/package-overrides.json';
 import readme from './template/readme.txt';
-import tsconfigJson from './template/tsconfig.json';
 import vscodeExtensions from './template/vscode-extensions.json';
 import vscodeSettings from './template/vscode-settings.json';
+import tsconfigJson from './template/_tsconfig.json';
 
 export interface CreateProjectOptions {
   // Initial version number, 1.0.0 by default

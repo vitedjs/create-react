@@ -58,7 +58,7 @@
     "merge": "^2.1.1",
     "package-json-from-git": "^1.2.2",
     "sass": "^1.58.3",
-    "sort-package-json": "^2.4.1"
+    "sort-package-json": "^1.57.0"
   },
   "devDependencies": {
     "@guoyunhe/node-scripts": "^2.0.5",
