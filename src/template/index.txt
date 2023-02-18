@@ -1,4 +1,4 @@
-import React, { Reactnode } from 'react';
+import { ReactNode } from 'react';
 
 export interface %componentName%Props {
   children: ReactNode;
