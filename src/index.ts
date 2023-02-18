@@ -47,10 +47,6 @@ export async function createProject(
   const gitignorePath = join(projectFullPath, '.gitignore');
   outputFile(gitignorePath, gitignore);
 
-  // tsconfig.json
-  const tsconfigJsonPath = join(projectFullPath, 'tsconfig.json');
-  outputJSON(tsconfigJsonPath, tsconfigJson, { spaces: 2 });
-
   // package.json
   const packageJsonPath = join(projectFullPath, 'package.json');
   let oldPackageJson: any = {};
@@ -62,6 +58,12 @@ export async function createProject(
   newPackageJson.name ||= basename(projectFullPath);
   newPackageJson.version = packageVersion || newPackageJson.version || '1.0.0';
   outputJSON(packageJsonPath, sortPackageJson(newPackageJson), { spaces: 2 });
+
+  // tsconfig.json
+  const tsconfigJsonPath = join(projectFullPath, 'tsconfig.json');
+  // alias to be used in examples
+  tsconfigJson.compilerOptions.paths = { [newPackageJson.name]: ['./src'] };
+  outputJSON(tsconfigJsonPath, tsconfigJson, { spaces: 2 });
 
   // CHANGELOG.md
   const changelogPath = join(projectFullPath, 'CHANGELOG.md');
@@ -88,7 +90,7 @@ export async function createProject(
 
     // src/index.test.tsx
     const indexTestTsPath = join(projectFullPath, 'src', 'index.test.tsx');
-    outputFile(indexTestTsPath, indexTestTs);
+    outputFile(indexTestTsPath, indexTestTs.replaceAll('%componentName%', componentName));
   }
 
   // index.html
