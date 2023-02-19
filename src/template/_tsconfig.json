@@ -2,6 +2,6 @@
   "extends": "@tsconfig/vite-react/tsconfig.json",
   "compilerOptions": {
     "paths": {},
-    "types": ["node", "jest", "@guoyunhe/react-lib-scripts/global"]
+    "types": ["jest", "@guoyunhe/react-lib-scripts/global"]
   }
 }
