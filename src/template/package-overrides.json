@@ -4,6 +4,7 @@
   "typings": "dist/index.d.ts",
   "files": ["dist", "CHANGELOG.md", "LICENSE", "README.md"],
   "scripts": {
+    "start": "react-lib-scripts start",
     "build": "react-lib-scripts build",
     "watch": "react-lib-scripts watch",
     "format": "react-lib-scripts format",
