@@ -5,6 +5,7 @@ import merge from 'merge';
 import { getPackageJsonFromGit } from 'package-json-from-git';
 import { basename, join } from 'path';
 import sortPackageJson from 'sort-package-json';
+import assetsDts from './template/assets.txt';
 import changelog from './template/changelog.txt';
 import docAppTs from './template/docApp.txt';
 import docDemoTs from './template/docDemo.txt';
@@ -97,6 +98,10 @@ export async function createProject(
   // index.html
   const indexHtmlPath = join(projectFullPath, 'index.html');
   outputFile(indexHtmlPath, indexHtml.replaceAll('%packageName%', newPackageJson.name));
+
+  // assets.d.ts
+  const assetsPath = join(projectFullPath, 'assets.d.ts');
+  outputFile(assetsPath, assetsDts);
 
   // docs/index.tsx
   const docIndexTsPath = join(projectFullPath, 'docs', 'index.tsx');
