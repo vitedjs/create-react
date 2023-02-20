@@ -1,0 +1,9 @@
+import { %componentName% } from '%packageName%';
+
+export default function Demo() {
+  return (
+    <div>
+      <%componentName%>Hello</%componentName%>
+    </div>
+  );
+}

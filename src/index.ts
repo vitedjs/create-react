@@ -7,6 +7,7 @@ import { basename, join } from 'path';
 import sortPackageJson from 'sort-package-json';
 import changelog from './template/changelog.txt';
 import docAppTs from './template/docApp.txt';
+import docDemoTs from './template/docDemo.txt';
 import docIndexTs from './template/docIndex.txt';
 import editorconfig from './template/editorconfig.txt';
 import gitignore from './template/gitignore.txt';
@@ -84,8 +85,8 @@ export async function createProject(
 
   // src/index.tsx
   const indexTsPath = join(projectFullPath, 'src', 'index.tsx');
+  const componentName = pascalCase(basename(projectFullPath));
   if (!(await glob(projectFullPath + '/src/index.{js,jsx,ts,tsx}')).length) {
-    const componentName = pascalCase(basename(projectFullPath));
     outputFile(indexTsPath, indexTs.replaceAll('%componentName%', componentName));
 
     // src/index.test.tsx
@@ -105,5 +106,14 @@ export async function createProject(
     // docs/App.tsx
     const docAppTsPath = join(projectFullPath, 'docs', 'App.tsx');
     outputFile(docAppTsPath, docAppTs);
+
+    // docs/App.tsx
+    const docDemoTsPath = join(projectFullPath, 'docs', 'Demo.tsx');
+    outputFile(
+      docDemoTsPath,
+      docDemoTs
+        .replaceAll('%packageName%', newPackageJson.name)
+        .replaceAll('%componentName%', componentName)
+    );
   }
 }
