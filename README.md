@@ -1,48 +1,9 @@
-# create-react-lib
+# @guoyunhe/create-react-lib
 
-## Install
-
-### Run directly
+Create React libraries
 
 ```bash
-npx create-react-lib
+npm create @guoyunhe/react-lib my-react-lib
 ```
 
-### Install on system
-
-```bash
-npm i -g create-react-lib
-%binName%
-```
-
-### Install in project
-
-```bash
-npm i -D create-react-lib
-```
-
-Add script entry:
-
-```json
-{
-  "scripts": {
-    "%binName%": "%binName%"
-  }
-}
-```
-
-Run:
-
-```bash
-npm run %binName%
-```
-
-## Options
-
-### `--help`
-
-Show help
-
-### `--version`
-
-Show version
+See also https://github.com/guoyunhe/react-lib-scripts
