@@ -9,7 +9,8 @@
     "watch": "react-lib-scripts watch",
     "format": "react-lib-scripts format",
     "lint": "react-lib-scripts lint",
-    "test": "react-lib-scripts test"
+    "test": "react-lib-scripts test",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@guoyunhe/react-lib-scripts": "^1.0.0",
@@ -18,10 +19,12 @@
     "@testing-library/user-event": "^14.0.0",
     "@tsconfig/vite-react": "^1.0.0",
     "@types/jest": "^29.0.0",
+    "@types/node": "^18.15.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "prism-react-renderer": "^1.0.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.0.0",
+    "react-doc-ui": "^1.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^4.0.0"
   },
