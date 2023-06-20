@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@guoyunhe/node-scripts": "^2.0.5",
-    "@tsconfig/node18-strictest": "^1.0.4",
+    "@tsconfig/node18-strictest": "^1.0.0",
     "@types/fs-extra": "^11.0.1",
     "@types/jest": "^29.5.2",
     "@types/node": "^16.18.36",
