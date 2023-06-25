@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2023-06-25
+
+- Updated nodejs 20
+
 ## 1.2.0 - 2023-06-20
 
 - Updated `typescript` (4→5) and `@tsconfig/vite-react` (1→2)
