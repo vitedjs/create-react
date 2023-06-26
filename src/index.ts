@@ -5,7 +5,7 @@ import merge from 'merge';
 import { getPackageJsonFromGit } from 'package-json-from-git';
 import { basename, join } from 'path';
 import sortPackageJson from 'sort-package-json';
-import assetsDts from './template/assets.txt';
+import tsconfigJson from './template/_tsconfig.json';
 import changelog from './template/changelog.txt';
 import docAppTs from './template/docApp.txt';
 import docDemoTs from './template/docDemo.txt';
@@ -20,7 +20,6 @@ import packageJsonOverrides from './template/package-overrides.json';
 import readme from './template/readme.txt';
 import vscodeExtensions from './template/vscode-extensions.json';
 import vscodeSettings from './template/vscode-settings.json';
-import tsconfigJson from './template/_tsconfig.json';
 
 export interface CreateProjectOptions {
   // Initial version number, 1.0.0 by default
@@ -98,10 +97,6 @@ export async function createProject(
   // index.html
   const indexHtmlPath = join(projectFullPath, 'index.html');
   outputFile(indexHtmlPath, indexHtml.replaceAll('%packageName%', newPackageJson.name));
-
-  // assets.d.ts
-  const assetsPath = join(projectFullPath, 'assets.d.ts');
-  outputFile(assetsPath, assetsDts);
 
   // docs/index.tsx
   const docIndexTsPath = join(projectFullPath, 'docs', 'index.tsx');
