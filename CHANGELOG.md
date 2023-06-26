@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 - 2023-06-26
+
+- Removed `src/assets.d.ts`
+
 ## 1.3.0 - 2023-06-25
 
 - Updated nodejs 20
