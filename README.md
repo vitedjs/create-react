@@ -1,9 +1,11 @@
-# @guoyunhe/create-react-lib
+# @vited/create-react
 
-Create React libraries
+Create React libraries with Vited
 
 ```bash
-npm create @guoyunhe/react-lib my-react-lib
+npm create @vited/react my-package
+# or
+yarn create @vited/react my-package
+# or
+pnpm create @vited/react my-package
 ```
-
-See also https://github.com/guoyunhe/react-lib-scripts

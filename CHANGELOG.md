@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0 - 2023-12-10
+
+- Renamed to `@vited/create-react`
+
 ## 1.4.0 - 2023-06-26
 
 - Removed `src/assets.d.ts`
